@@ -59,28 +59,9 @@ Open http://localhost:3000
 
 ---
 
-## Deploy to Vercel
 
-### 1. Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "initial commit"
-git remote add origin <your-github-repo-url>
-git push -u origin main
 ```
 
-### 2. Deploy on Vercel
-
-1. Go to https://vercel.com → New Project → import your repo
-2. Add environment variable:
-   - `DATABASE_URL` = your Neon connection string
-3. Click **Deploy**
-
-That's it! Vercel auto-runs `prisma generate` via `postinstall`.
-
-> ⚠️ After first deploy, run seed manually via Vercel Functions or locally pointing to the production DB URL.
 
 ---
 
