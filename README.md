@@ -57,13 +57,13 @@ Open http://localhost:3000
 
 ---
 
-
+## API Endpoints
 ```
 
 
 ---
 
-## API Endpoints
+
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
