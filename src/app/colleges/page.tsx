@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import CollegeCard from '@/components/CollegeCard';
 import { College, PaginatedColleges } from '@/types/college';
@@ -9,6 +9,14 @@ const TYPES = ['', 'Public', 'Private', 'Deemed'];
 const STATES = ['', 'Maharashtra', 'Delhi', 'Karnataka', 'Tamil Nadu', 'Rajasthan', 'Gujarat', 'West Bengal'];
 
 export default function CollegesPage() {
+  return (
+    <Suspense fallback={<div className="max-w-7xl mx-auto px-4 py-10 text-slate-500">Loading...</div>}>
+      <CollegesContent />
+    </Suspense>
+  );
+}
+
+function CollegesContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
