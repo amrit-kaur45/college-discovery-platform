@@ -1,11 +1,18 @@
 'use client';
-export const dynamic = 'force-dynamic';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { College } from '@/types/college';
 
 export default function ComparePage() {
+  return (
+    <Suspense fallback={<div className="max-w-6xl mx-auto px-4 py-10 text-slate-500">Loading...</div>}>
+      <CompareContent />
+    </Suspense>
+  );
+}
+
+function CompareContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [colleges, setColleges] = useState<College[]>([]);
