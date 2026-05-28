@@ -72,8 +72,11 @@ Open http://localhost:3000
 | GET | `/api/colleges/:id` | Get college by ID |
 | GET | `/api/colleges/compare?ids=1,2,3` | Compare 2-3 colleges |
 
-## Project Structure
 
+
+```
+
+## Project Structure
 ```
 src/
 ├── app/
