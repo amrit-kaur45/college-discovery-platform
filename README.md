@@ -27,11 +27,9 @@ cd college-discovery
 npm install
 ```
 
-### 2. Set up PostgreSQL (Neon — free)
+### 2. Set up PostgreSQL
 
-1. Go to https://neon.tech and create a free account
-2. Create a new project → copy the **connection string**
-3. Create `.env` file in root:
+Create `.env` file in root:
 
 ```bash
 cp .env.example .env
